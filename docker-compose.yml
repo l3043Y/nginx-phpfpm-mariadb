@@ -1,0 +1,21 @@
+version: "2.1"
+services:
+  fpm1:
+    image: l3043y/fpm1
+    container_name: fpm1
+    volumes:
+      - ./www:/usr/share/nginx/html
+    ports:
+      - 80:80
+  mariadb:
+    image: linuxserver/mariadb
+    container_name: mariadb
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - ./dbconfig:/config
+    ports:
+      - 3306:3306
+    restart: unless-stopped

@@ -1,0 +1,4 @@
+MYSQL_ROOT_PASSWORD="Dli2work."
+MYSQL_DATABASE="admin_iot"
+MYSQL_USER="admin_vp"
+MYSQL_PASSWORD="Dli2work." 
